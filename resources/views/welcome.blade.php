@@ -24,6 +24,9 @@
 </div>
 </form>
 </div>
+{{-- @foreach ((array)$msg as $msg)
+    {{$msg->msg}}
+@endforeach --}}
 </div>
     <script src="https://cdn.tailwindcss.com"></script>   
 </body>

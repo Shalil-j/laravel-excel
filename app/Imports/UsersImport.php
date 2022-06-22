@@ -15,7 +15,7 @@ use Maatwebsite\Excel\Concerns\Importable;
 // use Maatwebsite\Excel\Concerns\ToCollection;
 
 
-class UsersImport implements WithMultipleSheets,ToModel,ToArray
+class UsersImport implements WithMultipleSheets
 {
     /**
     * @param array $row

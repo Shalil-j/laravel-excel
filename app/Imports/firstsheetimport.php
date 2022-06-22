@@ -2,25 +2,44 @@
 
 namespace App\Imports;
 use App\Models\User;
-// use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\Importable;
+use Maatwebsite\Excel\Concerns\ToCollection;
 
-class firstsheetimport implements ToArray
+class firstsheetimport implements ToCollection
 {
     /**
     * @param Collection $collection
     */
-    use Importable;
+    // use Importable;
 
-    public function array(array $row)
+    public function collection(Collection $rows)
     {
-        return new User([
-        'name'    => $row[0],
-        'email'    => $row[1], 
-        'password' => $row[2],
-        ]);
+            return $rows;
+
+        
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public function array(array $row)
+    // {
+    //     return new User([
+    //     'name'    => $row[0],
+    //     'email'    => $row[1], 
+    //     'password' => $row[2],
+    //     ]);
+    // }
